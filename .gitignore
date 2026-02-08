@@ -1,0 +1,394 @@
+# ML Unified System v3.3 - Git Ignore File
+# ═══════════════════════════════════════════════════════════════
+
+# ═══════════════════════════════════════════════════════════════
+# PYTHON
+# ═══════════════════════════════════════════════════════════════
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+.pybuilder/
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# poetry
+poetry.lock
+
+# pdm
+.pdm.toml
+
+# PEP 582
+__pypackages__/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pytype static type analyzer
+.pytype/
+
+# Cython debug symbols
+cython_debug/
+
+# ═══════════════════════════════════════════════════════════════
+# ML UNIFIED SYSTEM SPECIFIC
+# ═══════════════════════════════════════════════════════════════
+
+# Input data directories (optional - keep structure, ignore content)
+data_json/*.json
+data_json/**/*.json
+data_txt/*.txt
+data_txt/**/*.txt
+data_db/*.db
+data_db/**/*.db
+data_db/*.sqlite
+data_db/**/*.sqlite
+
+# EXCEPT: Keep example/template files
+!data_json/example_contract.json
+!data_json/README.md
+!data_txt/README.md
+!data_db/README.md
+
+# Trained models (can be large)
+trained_models/models/*
+trained_models/**/*.joblib
+trained_models/**/*.pkl
+trained_models/**/*.pickle
+
+# EXCEPT: Keep pointer file
+!trained_models/best_model.txt
+!trained_models/README.md
+
+# ML output files
+ml_output/*.json
+ml_output/*.txt
+ml_output/**/*.json
+ml_output/**/*.txt
+
+# EXCEPT: Keep example outputs for documentation
+!ml_output/example_output.json
+!ml_output/README.md
+
+# Model checkpoints and temporary files
+checkpoints/
+*.checkpoint
+*.tmp
+*.temp
+
+# Data processing temporary files
+*.parquet
+*.feather
+*.h5
+*.hdf5
+
+# ═══════════════════════════════════════════════════════════════
+# IDE & EDITORS
+# ═══════════════════════════════════════════════════════════════
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# PyCharm
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+.*.swp
+.*.swo
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# Atom
+.atom/
+
+# ═══════════════════════════════════════════════════════════════
+# OPERATING SYSTEM
+# ═══════════════════════════════════════════════════════════════
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+*~
+.directory
+.Trash-*
+
+# ═══════════════════════════════════════════════════════════════
+# ANDROID DEVELOPMENT
+# ═══════════════════════════════════════════════════════════════
+
+# Pydroid 3
+.pydroid/
+*.pydroid
+
+# Termux
+.termux/
+
+# Android Studio (if developing mobile app)
+*.apk
+*.aab
+*.ap_
+*.dex
+local.properties
+.gradle/
+gradle/
+gradlew
+gradlew.bat
+
+# ═══════════════════════════════════════════════════════════════
+# DOCUMENTATION
+# ═══════════════════════════════════════════════════════════════
+
+# Build artifacts
+docs/_build/
+docs/_static/
+docs/_templates/
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# ═══════════════════════════════════════════════════════════════
+# LOGS & DEBUGGING
+# ═══════════════════════════════════════════════════════════════
+
+# Log files
+*.log
+logs/
+*.log.*
+
+# Debug files
+debug/
+*.debug
+
+# Profiling
+*.prof
+*.lprof
+*.pstats
+
+# ═══════════════════════════════════════════════════════════════
+# SECURITY & SECRETS
+# ═══════════════════════════════════════════════════════════════
+
+# API keys and secrets
+.env
+.env.*
+secrets.json
+config.secret.json
+*.key
+*.pem
+*.secret
+
+# Blockchain private keys (CRITICAL!)
+*.keystore
+wallet.json
+private_keys.txt
+
+# ═══════════════════════════════════════════════════════════════
+# TESTING
+# ═══════════════════════════════════════════════════════════════
+
+# Test output
+test_output/
+test_results/
+.pytest_cache/
+
+# Coverage reports
+htmlcov/
+.coverage
+coverage.xml
+
+# ═══════════════════════════════════════════════════════════════
+# DEPLOYMENT
+# ═══════════════════════════════════════════════════════════════
+
+# Docker
+.dockerignore
+docker-compose.override.yml
+
+# Kubernetes
+*.kubeconfig
+
+# CI/CD
+.gitlab-ci-local/
+
+# ═══════════════════════════════════════════════════════════════
+# MISC
+# ═══════════════════════════════════════════════════════════════
+
+# Compressed files
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# Large datasets (add specific patterns)
+*.csv.gz
+large_dataset/
+
+# Temporary directories
+tmp/
+temp/
+scratch/
+
+# User-specific files
+notes.txt
+todo.txt
+scratch.py
+test_*.py
+
+# ═══════════════════════════════════════════════════════════════
+# PROJECT SPECIFIC NOTES
+# ═══════════════════════════════════════════════════════════════
+
+# Keep directory structure with README files in empty dirs:
+# - data_json/README.md (explains what goes here)
+# - data_txt/README.md (explains what goes here)
+# - data_db/README.md (explains what goes here)
+# - trained_models/README.md (explains model storage)
+# - ml_output/README.md (explains output format)
+
+# ═══════════════════════════════════════════════════════════════
+# END OF .gitignore
+# ═══════════════════════════════════════════════════════════════
+
