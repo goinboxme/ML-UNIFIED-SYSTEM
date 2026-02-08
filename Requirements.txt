@@ -1,0 +1,94 @@
+# ML Unified System v3.3 - Dependencies
+# ════════════════════════════════════════════════════════════════
+
+# ═══════════════════════════════════════════════════════════════
+# CORE DEPENDENCIES (REQUIRED)
+# ═══════════════════════════════════════════════════════════════
+
+# Numerical Computing
+numpy>=1.21.0,<2.0.0
+
+# Data Processing
+pandas>=1.3.0,<3.0.0
+
+# Machine Learning Framework
+scikit-learn>=1.0.0,<2.0.0
+
+# Model Persistence
+joblib>=1.1.0
+
+# ═══════════════════════════════════════════════════════════════
+# OPTIONAL DEPENDENCIES (ENHANCED FEATURES)
+# ═══════════════════════════════════════════════════════════════
+
+# Imbalanced Learning (SMOTE for class balancing)
+imbalanced-learn>=0.9.0
+
+# Advanced ML Algorithms
+xgboost>=1.5.0              # Gradient boosting
+catboost>=1.0.0             # CatBoost classifier
+
+# Model Explainability
+shap>=0.40.0                # SHAP values for feature importance
+
+# Blockchain Integration
+web3>=5.0.0                 # Direct Ethereum interaction
+
+# ═══════════════════════════════════════════════════════════════
+# DEVELOPMENT DEPENDENCIES (OPTIONAL)
+# ═══════════════════════════════════════════════════════════════
+
+# Visualization (for analysis & debugging)
+matplotlib>=3.4.0
+seaborn>=0.11.0
+
+# Progress bars
+tqdm>=4.62.0
+
+# Testing
+pytest>=7.0.0
+pytest-cov>=3.0.0
+
+# Code Quality
+black>=22.0.0               # Code formatter
+flake8>=4.0.0               # Linter
+mypy>=0.950                 # Type checker
+
+# ═══════════════════════════════════════════════════════════════
+# PLATFORM-SPECIFIC NOTES
+# ═══════════════════════════════════════════════════════════════
+
+# Android (Pydroid 3):
+#   Most packages available via Pydroid's built-in package manager
+#   Install: numpy, pandas, scikit-learn, joblib
+#   Optional packages may need manual installation
+
+# Android (Termux):
+#   Install via pip with --break-system-packages flag if needed:
+#   pip install -r requirements.txt --break-system-packages
+
+# macOS (Apple Silicon):
+#   Some packages may need specific builds
+#   Use conda or miniforge for best compatibility
+
+# Windows:
+#   All packages should install normally via pip
+#   For XGBoost/CatBoost, may need Visual C++ redistributable
+
+# ═══════════════════════════════════════════════════════════════
+# INSTALLATION COMMANDS
+# ═══════════════════════════════════════════════════════════════
+
+# Minimal installation (core only):
+#   pip install numpy pandas scikit-learn joblib
+
+# Full installation (all features):
+#   pip install -r requirements.txt
+
+# Development installation:
+#   pip install -r requirements.txt
+#   pip install matplotlib seaborn tqdm pytest black flake8
+
+# Android Termux:
+#   pkg install python
+#   pip install -r requirements.txt --break-system-packages
